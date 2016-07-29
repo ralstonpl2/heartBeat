@@ -1,0 +1,36 @@
+{
+  "name": "gausshyrax",
+  "version": "0.0.1",
+  "description": "Manage people in your life",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "postinstall": "bower install"
+  },
+  "engines": {
+    "node": "5.3.0",
+    "npm": "3.3.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Courageous-Climbers/GaussHyrax.git"
+  },
+  "author": "Courageous Climbers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Courageous-Climbers/GaussHyrax/issues"
+  },
+  "homepage": "https://github.com/Courageous-Climbers/GaussHyrax#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "bower": "^1.7.2",
+    "express": "^4.13.3",
+    "moment": "^2.11.1",
+    "mongoose": "^4.3.5",
+    "morgan": "^1.6.1",
+    "underscore": "^1.8.3"
+  }
+}
