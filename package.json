@@ -1,7 +1,7 @@
 {
-  "name": "gausshyrax",
+  "name": "heartBeat",
   "version": "0.0.1",
-  "description": "Manage people in your life",
+  "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -16,14 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Courageous-Climbers/GaussHyrax.git"
+    "url": "git+https://github.com/heartBeatGreenField/heartBeat"
   },
-  "author": "Courageous Climbers",
+  "author": "HeartBeat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Courageous-Climbers/GaussHyrax/issues"
+    "url": "https://github.com/heartBeatGreenField/heartBeat/issues"
   },
-  "homepage": "https://github.com/Courageous-Climbers/GaussHyrax#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
     "bower": "^1.7.2",

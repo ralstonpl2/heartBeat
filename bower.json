@@ -1,10 +1,5 @@
 {
   "name": "client",
-  "homepage": "https://github.com/Courageous-Climbers/GaussHyrax.git",
-  "authors": [
-    "Karun Siddana <ksiddana@gmail.com>"
-  ],
-  "description": "Manage your relationships",
   "main": "index.html",
   "moduleType": [],
   "license": "MIT",
