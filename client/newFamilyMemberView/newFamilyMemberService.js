@@ -6,16 +6,16 @@ angular.module('newFamilyMemberServices', [])
   var getUserID = function() {
     return $http({
       method: 'GET',
-      url: '/api/user/' + $window.localStorage.getItem('com.hyrax')
+      url: '/api/user/' + $window.localStorage.getItem('com.heartBeat')
     });
   };
 
   var saveMember = function(memberObj) {
 
-    console.log("this is memberObj: ", memberObj);
+    console.log("this is member object: ", memberObj);
     return $http({
       method : 'POST',
-      url : '/api/family/' + $window.localStorage.getItem('com.hyrax'),
+      url : '/api/family/' + $window.localStorage.getItem('com.heartBeat'),
       headers: {
         'Content-Type': 'application/json'
       },
@@ -30,7 +30,7 @@ angular.module('newFamilyMemberServices', [])
   var updateMember = function(memberObj) {
     return $http({
       method: 'PUT',
-      url : '/api/family/' + $window.localStorage.getItem('com.hyrax') + '/' + memberObj._id,
+      url : '/api/family/' + $window.localStorage.getItem('com.heartBeat') + '/' + memberObj._id,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -45,7 +45,7 @@ angular.module('newFamilyMemberServices', [])
   var deleteMember = function(memberObj) {
     return $http({
       method: 'DELETE',
-      url : '/api/family/' + $window.localStorage.getItem('com.hyrax') + '/' + memberObj._id
+      url : '/api/family/' + $window.localStorage.getItem('com.heartBeat') + '/' + memberObj._id
     })
     .then(function(res) {
       console.log("Response from the saveUser DELETE Request: ", res);
