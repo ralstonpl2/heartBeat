@@ -36,13 +36,6 @@ var RelationshipHistorySchema = mongoose.Schema({
 var FamilySchema = mongoose.Schema({
   firstName: String,      
   lastName: String,
-    phoneNumber: String,         //delete
-    email: String,               //delete
-    streetAddress: String,       //delete
-    city: String,                //delete
-    state: String,               //delete
-    country: String,             //delete
-    zipcode: String,             //delete
     nextContactDate: Date,      //determines order in the list
     contactFrequency: Number,   //number of days till next task
     history:[RelationshipHistorySchema]
