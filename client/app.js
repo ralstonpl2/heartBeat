@@ -1,6 +1,6 @@
 var app = angular.module('heartbeat', ['heartbeat.login', 'ui.router']);
 
-app.config(function($stateProvider, $urlRouteProvider)){
+app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('/main', {
       url: '/main',
@@ -15,4 +15,6 @@ app.config(function($stateProvider, $urlRouteProvider)){
 
     $urlRouterProvider.otherwise('/login');
 
-}
+})
+
+

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='heartbeat'>
   <head>
+    <link href="bower_components/c3/c3.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8" />
     <title></title>
   </head>
@@ -8,9 +9,16 @@
     <h1></h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+    <div ui-view></div>
 
-    <script src="client/loginView.js"></script>
-    <script src="client/app.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/c3/c3.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="login/loginView.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
