@@ -2,6 +2,10 @@ var mongoose = require('mongoose');  //cross-platform embedded web servers, Sing
 var moment = require('moment'); //Full featured date library for parsing, validating, manipulating, and formatting dates.
 var _ = require('underscore');  //utility library
 
+
+//make list shorter to the following tasks on had call, coffee, texted, meal
+//first name, last name, relationship, phone number to add family member.
+
 mongoose.connect('mongodb://localhost:27017');    //connect to MongoDB
 
 var db = mongoose.connection; //naming/variable chaining, convention
@@ -10,7 +14,8 @@ var exports = module.exports;
 
 db.on('error', console.error.bind(console, 'connection error:'));  // to get notified if we connect successfully or if a connection error occurs
 
-db.once('open', function() {            
+db.once('open', function() {              //once is a very large object that contains the 
+                                          //the Schemas and Schema related   
   console.log("db connected!");
 
   // information about a family member
