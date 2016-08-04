@@ -16,7 +16,7 @@ app.controller('loginCtrl', function($scope, $http, $window, $location){
     }).then(function(res){
       console.log(res);
       //save user id in local storage
-      $window.localStorage.setItem('heartBeat',res.data['_id']);
+      $window.localStorage.setItem('heartBeat',res.data);
       
       if(res.data.length){
         //a user profile was returned, so forward them to their dashboard

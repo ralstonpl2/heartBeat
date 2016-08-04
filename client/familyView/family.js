@@ -4,8 +4,9 @@ app.controller('familyCtrl', function($scope, $window, familyFactory){
   $scope.names = {};
 
   $scope.getNames = function(){
-    console.log('hi')
-    var familyObj = familyFactory.getFamilyNames($window.localStorage.getItem('heartbeat'))
+    console.log($window.localStorage.getItem('heartBeat'))
+    var familyObj = familyFactory.getFamilyNames($window.localStorage.getItem('heartBeat'))
+    console.log(familyObj)
   }
 
   //call the get function and push the names into '$scope.names'
