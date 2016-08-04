@@ -1,6 +1,6 @@
 app = angular.module('heartbeat.family', []);
 
-app.controller('familyCtrl', function($scope, $window, familyFactory){
+app.controller('familyCtrl', function($scope, $window, $uibModal, $location, familyFactory){
   $scope.family = {};
 
 //get the names will get the info of all the objects from echa family memeber so we can display the data in the family list
@@ -12,6 +12,16 @@ app.controller('familyCtrl', function($scope, $window, familyFactory){
     })
   }
 $scope.getNames()
+
+  $scope.open = function(){
+    
+    var modalInstance = $uibModal.open({
+      animation: true,
+      templateUrl: '../actionView/action.html' ,
+      controller: 'actionCtrl'
+    });
+
+  }
 
   //ng click call a function that changes $scope.selectedPerson
     // if the selected person in the same as the current change selected person to everyone

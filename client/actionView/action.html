@@ -1,0 +1,19 @@
+<div ng-controller="actionCtrl">
+
+  <form ng-repeat="action in actions">
+
+    <input type="checkbox" checklist-model="user.actions" checklist-value="action"> {{action}} 
+   
+
+  </form>
+
+   <div> {{ user.actions }} </div>
+
+  <form>
+
+    <input ng-submit="sendAction()" type="submit" value="Add Action">
+
+  </form>
+
+</div>
+
