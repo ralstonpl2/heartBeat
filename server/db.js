@@ -27,17 +27,17 @@ db.once('open', function() {              //once is a very large object that con
 //  Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
 
 var RelationshipHistorySchema = mongoose.Schema({
-  date: Date,
+  // date: Date,
     action: String,  //what was the task
     points: Number,
-    notes: String
+    // notes: String
   });
 
 var FamilySchema = mongoose.Schema({
   firstName: String,      
   lastName: String,
-    nextContactDate: Date,      //determines order in the list
-    contactFrequency: Number,   //number of days till next task
+    // nextContactDate: Date,      //determines order in the list
+    // contactFrequency: Number,   //number of days till next task
     history:[RelationshipHistorySchema]
   });
 //Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
@@ -63,28 +63,16 @@ var Action = mongoose.model('Action', ActionSchema);
   db.collections['actions'].remove();
   var actions = [
   {
-    action:"make call",
-    points:8
-  },{
-    action:"send text",
-    points:3
-  },{
-    action:"send letter",
+    action:"Called",
     points:6
   },{
-    action:"send email",
-    points:4
+    action:"Texted",
+    points:3
   },{
-    action:"have coffee",
-    points:10
+    action:"Had coffee",
+    points:8
   },{
-    action:"have dinner",
-    points:10
-  },{
-    action:"have lunch",
-    points:10
-  },{
-    action:"have drinks",
+    action:"Had lunch/dinner",
     points:10
   }
   ]
@@ -101,46 +89,46 @@ var Action = mongoose.model('Action', ActionSchema);
     family:[{
       firstName:"frodo",
       lastName:"baggins",
-      nextContactDate: new Date(),
-      contactFrequency: 14,
+      // nextContactDate: new Date(),
+      // contactFrequency: 14,
       history:[
       {
-        action:"call",
-        notes:"this guy is a nn",
-        points:10,
-        date: new Date("1/1/16")
+        action:"Called",
+        // notes:"this guy is a nn",
+        points:6,
+        // date: new Date("1/1/16")
       },
       {
-        action:"email",
-        notes:"no, wait, I am a nn",
-        points:5,
-        date: new Date("1/10/16")
+        action:"Texted",
+        // notes:"no, wait, I am a nn",
+        points:3,
+        // date: new Date("1/10/16")
       },
       {
-        action:"email",
-        notes:"love emailing this guy",
-        points:5,
-        date: new Date()
+        action:"Texted",
+        // notes:"love emailing this guy",
+        points:3,
+        // date: new Date()
       }
       ]
 
     },{
       firstName:"bilbo the short",
       lastName:"baggins",
-      nextContactDate: new Date(),
-      contactFrequency: 7,
+      // nextContactDate: new Date(),
+      // contactFrequency: 7,
       history:[
       {
-        action:"text",
-        notes:"I love ice cream",
-        points:2,
-        date: new Date("12/1/15")
+        action:"Texted",
+        // notes:"I love ice cream",
+        points:3,
+        // date: new Date("12/1/15")
       },
       {
-        action:"call",
-        notes:"he does a great impression of Pee Wee Herman",
-        points:5,
-        date: new Date()
+        action:"Called",
+        // notes:"he does a great impression of Pee Wee Herman",
+        points:6,
+        // date: new Dsate()
       }
       ]
     }
