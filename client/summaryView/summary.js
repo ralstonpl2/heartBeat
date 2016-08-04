@@ -3,7 +3,6 @@ app = angular.module('heartbeat.summary', []);
 app.controller('summaryCtrl', function($scope, summaryFactory){
 
 
-
 //if everybody call makeLineChart else call makeDonutChart
 
 summaryFactory.makeLineChart([
@@ -27,6 +26,6 @@ app.factory('summaryFactory', function(){
 
 
   return {
-    makeChart: makeChart
+    makeLineChart: makeLineChart
   }
 })
