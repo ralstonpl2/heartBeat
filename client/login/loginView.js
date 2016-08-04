@@ -1,6 +1,6 @@
 app = angular.module('heartbeat.login', []);
 
-app.controller('loginCtrl', function($scope, $http, $window){
+app.controller('loginCtrl', function($scope, $http, $window, $location){
   $scope.data = {};
 
   $scope.testFunc = function(text1, text2){
@@ -27,7 +27,7 @@ app.controller('loginCtrl', function($scope, $http, $window){
 
         //emit an event to the parent familyController to display the usernaem on login
         $scope.$emit('userLoggedIn', $scope.login.userName);
-        $location.path('/dashboard');
+        $location.path('/main');
       }
       //else no user object was returned, so keep here
 
