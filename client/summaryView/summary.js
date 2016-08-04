@@ -3,6 +3,7 @@ app = angular.module('heartbeat.summary', []);
 app.controller('summaryCtrl', function($scope, $window, summaryFactory){
 
   $scope.obj =[]
+  //this function will get the family members info and organize it so the graph can use it
   $scope.getFamilyobj = function(id){
     var item = $window.localStorage.getItem('heartBeat');
     summaryFactory.getFamily(item).then(function(res){
@@ -18,8 +19,10 @@ app.controller('summaryCtrl', function($scope, $window, summaryFactory){
       }
     })
   }
+  //call the function right away so we can get the info to build the graph
   $scope.getFamilyobj()
-  //if everybody call makeLineChart else call makeDonutChart
+
+//set time out so the function can get all the information and and build the graph
   setTimeout(function () {
     summaryFactory.makeLineChart($scope.obj)
   }, 200)
@@ -28,7 +31,6 @@ app.controller('summaryCtrl', function($scope, $window, summaryFactory){
 
 
 app.factory('summaryFactory', function($http){
-  
   var makeLineChart = function(data){
     var chart =  c3.generate({
       bindto:'#chart',
