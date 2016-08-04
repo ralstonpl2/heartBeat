@@ -1,4 +1,4 @@
-var app = angular.module('heartbeat', ['heartbeat.login','heartbeat.family','heartbeat.summary', 'ui.router']);
+var app = angular.module('heartbeat', ['heartbeat.login','heartbeat.family','heartbeat.action','heartbeat.summary', 'ui.router', 'ui.bootstrap', 'checklist-model']);
 
 app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
@@ -15,6 +15,4 @@ app.config(function($stateProvider, $urlRouterProvider){
 
     $urlRouterProvider.otherwise('/login');
 
-})
-
-
+});
