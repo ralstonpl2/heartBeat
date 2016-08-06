@@ -16,7 +16,6 @@ app.controller('summaryCtrl', function($scope, $window, summaryFactory){
           arr.push(temp[j].points)
         }
         $scope.obj.push(arr)
-        console.log("Testing", $scope.obj);
       }
     })
   }
