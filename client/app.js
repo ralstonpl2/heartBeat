@@ -1,4 +1,4 @@
-var app = angular.module('heartbeat', ['heartbeat.login','heartbeat.family','heartbeat.action','heartbeat.summary', 'ui.router', 'ui.bootstrap', 'checklist-model']);
+var app = angular.module('heartbeat', ['heartbeat.login','heartbeat.family','heartbeat.action','heartbeat.summary', 'heartbeat.newFamilyMember', 'ui.router', 'ui.bootstrap', 'checklist-model']);
 
 app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider

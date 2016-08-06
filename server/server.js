@@ -86,6 +86,8 @@ app.post('/api/user', function (req, res, next){
   exports.addHistory = function(idObj, historyObj, callback){
     return accessUserById(idObj,"add history", historyObj, callback);
   };
+
+
 app.listen(port, function () {
   console.log('Example app listening on port 3000!');
 });

@@ -24,8 +24,16 @@ $scope.getNames()
       templateUrl: '../actionView/action.html' ,
       controller: 'actionCtrl'
     });
-
   }
+
+  $scope.openAddLovedOne = function(){
+
+    var modalInstance = $uibModal.open({
+      animation: true,
+      templateUrl: '../newFamilyMemberView/newFamilyMember.html' ,
+      controller: 'memberCtrl'
+    });
+  };
 
   //ng click call a function that changes $scope.selectedPerson
     // if the selected person in the same as the current change selected person to everyone
