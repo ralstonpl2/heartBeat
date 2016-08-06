@@ -4,7 +4,7 @@
   <!-- ng repeat on names and place a ng-click on each name -->
   <div ng-repeat='person in family' >
     <li> {{ person.firstName }} {{ person.lastName }} </li>
-    <button ng-click="open()"> Add Action </button>
+    <button ng-click="open(person._id)"> Add Action </button>
   </div>
 
 </div>

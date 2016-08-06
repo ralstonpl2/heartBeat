@@ -36,7 +36,7 @@ app.factory('summaryFactory', function($http){
       bindto:'#chart',
       data: {
         columns: data,
-        type: 'spline'
+        type: 'donut'
       }
     });
   }
