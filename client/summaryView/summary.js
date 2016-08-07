@@ -29,7 +29,6 @@ app.controller('summaryCtrl', function($scope, $window, summaryFactory){
 
 });
 
-
 app.factory('summaryFactory', function($http){
   var makeLineChart = function(data){
     var chart =  c3.generate({
@@ -49,9 +48,6 @@ app.factory('summaryFactory', function($http){
       return res.data
     })
   }
-
-//if selected person is everybody get all the points else just one person points 
-
 
   return {
     makeLineChart: makeLineChart,

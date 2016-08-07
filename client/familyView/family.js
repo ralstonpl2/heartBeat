@@ -3,8 +3,6 @@ app = angular.module('heartbeat.family', []);
 app.controller('familyCtrl', function($rootScope, $scope, $window, $uibModal, $location, familyFactory, familyIdFactory){
   $scope.family = {};
 
-  // $rootScope.familyId = $scope._id;
-
 //get the names will get the info of all the objects from echa family memeber so we can display the data in the family list
   $scope.getNames = function(){
     var item = $window.localStorage.getItem('heartBeat');
@@ -13,7 +11,7 @@ app.controller('familyCtrl', function($rootScope, $scope, $window, $uibModal, $l
       console.log(res)
     })
   }
-$scope.getNames()
+  $scope.getNames()
 
   $scope.open = function(familyId){
 

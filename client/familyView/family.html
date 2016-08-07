@@ -1,13 +1,12 @@
- <link rel="stylesheet" type="text/css" href="familyView/styleFamily.css">
+<link rel="stylesheet" type="text/css" href="familyView/styleFamily.css">
+
 <div class="familyWrapper" ng-controller='familyCtrl'>
-<div>
-  <h1>Family <button class="addFamilyMemberButton" ng-click='openAddLovedOne()'>Add Loved One</button>
-</div>
-  <!-- <button ng-click='getNames()'>Add Loved One</button> -->
-  <!-- ng repeat on names and place a ng-click on each name -->
+  <div>
+    <h1>Loved Ones <button class="addFamilyMemberButton" ng-click='openAddLovedOne()'>Add Loved One</button>
+  </div>
+
   <div class="eachFamilyMember" ng-repeat='person in family' >
     <li> {{ person.firstName }} {{ person.lastName }} </li>
     <button class="addActionButton" ng-click="open(person._id)"> Add Action </button>
   </div>
-
 </div>

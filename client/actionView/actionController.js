@@ -17,16 +17,15 @@ app.controller('actionCtrl', function($scope, $window, $uibModalInstance, action
 
   $scope.sendActionPoints = function(){
 
-    // var actionObj = { action: , points: }
     var familyId = familyIdFactory.get();
 
     console.log('test')
     var userId = $window.localStorage.getItem('heartBeat');
     actionFactory.sendAction(userId, familyId, $scope.user.actions[0]).then(function(res){
       console.log(res);
-      })
-      $uibModalInstance.close();
-    }
+    })
+    $uibModalInstance.close();
+  }
 
     
 })
