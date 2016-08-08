@@ -1,4 +1,4 @@
-# Heart Beat :heart: #
+# :heart: Heart Beat :heart: #
 
 ## Heading ##
   > An app that encourages mindfullness in your closest relationships.

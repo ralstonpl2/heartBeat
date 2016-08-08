@@ -1,4 +1,4 @@
-# heartBeat
+# Heart Beat :heart:
 
 > An app encouraging mindfulness of your closest relatioships.  
 
@@ -6,7 +6,7 @@
 
   - __Product Owner__: Ralston Louie
   - __Scrum Master__: Aleks Basalilov
-  - __Development Team Members__: Luisa Zapata & Garland Riley
+  - __Development Team Members__: Luisa Zapata & Garland Riley 
 
 ## Table of Contents
 
