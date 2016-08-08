@@ -1,13 +1,13 @@
 app = angular.module('heartbeat.action', []);
 
-app.controller('actionCtrl', function($scope, $window, $uibModalInstance, actionFactory, familyIdFactory){
+app.controller('actionCtrl', function($scope, $window, actionFactory, familyIdFactory){
 
   $scope.actions = [
 
     { action: 'Called' , points: 6 },
     { action: 'Texted', points: 3 },
     { action: 'Had Coffee', points: 8 },
-    { action: 'Had Lunch or Dinner', points: 10 }
+    { action: 'Had a Meal', points: 10 }
 
   ];
 
@@ -24,7 +24,8 @@ app.controller('actionCtrl', function($scope, $window, $uibModalInstance, action
     actionFactory.sendAction(userId, familyId, $scope.user.actions[0]).then(function(res){
       console.log(res);
     })
-    $uibModalInstance.close();
+    $scope.toggleActionModal();
+    // $uibModalInstance.close();
   }
 
     

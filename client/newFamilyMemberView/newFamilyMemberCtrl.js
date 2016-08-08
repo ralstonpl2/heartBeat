@@ -1,12 +1,13 @@
 angular.module('heartbeat.newFamilyMember', [])
 
 //sets up controller with the name 'memberCtrl', injects $scope and NewFamMem Factory into the controller as dependencies.
-.controller('memberCtrl', function($scope, memberFactory, $window, $uibModalInstance){
+.controller('memberCtrl', function($scope, memberFactory, $window){
   // Slider for the contact frequency.
   $scope.member = {};
   
 
   $scope.saveMember = function(){
+    console.log('worked')
     if($scope.member.firstName === undefined || $scope.member.lastName === undefined || $scope.member.relationship === undefined){
       console.log('please fill all the required fields')
     }else{
@@ -14,14 +15,16 @@ angular.module('heartbeat.newFamilyMember', [])
       memberFactory.post(userId, $scope.member).then(function(res){
         console.log(res);
       })
-      $uibModalInstance.close();
+      $scope.toggleModal();
+      // $uibModalInstance.close();
     }
   }
 
-  $scope.cancel = function(){
-      $uibModalInstance.dismiss();
 
-  }
+  // $scope.cancel = function(){
+  //     $uibModalInstance.dismiss();
+
+  // }
 
 })
 
