@@ -5,9 +5,9 @@ var _ = require('underscore');  //utility library
 //make list shorter to the following tasks on had call, coffee, texted, meal
 //first name, last name, relationship, phone number to add family member.
 
-// 'mongodb://garland:abc123@ds145415.mlab.com:45415/heroku_jcf6w2mv'
+// mongoose.connect('mongodb://ralston:heart123@ds145415.mlab.com:45415/heroku_jcf6w2mv');
 
-mongoose.connect('mongodb://ralston:heart123@ds145415.mlab.com:45415/heroku_jcf6w2mv');    //connect to MongoDB
+mongoose.connect('mongodb://localhost:27017');    //connect to MongoDB
 
 var db = mongoose.connection; //naming/variable chaining, convention
 
@@ -27,6 +27,7 @@ db.once('open', function() {              //once is a very large object that con
 
 //  Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
 
+/*
 var RelationshipHistorySchema = mongoose.Schema({
   // date: Date,
     action: String,  //what was the task
@@ -41,11 +42,20 @@ var FamilySchema = mongoose.Schema({
     // contactFrequency: Number,   //number of days till next task
     history:[RelationshipHistorySchema]
   });
+*/
+
 //Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
 var UserSchema = mongoose.Schema({
   userName: {type:String,index:{unique:true}},
   password: String,
-  family:[FamilySchema]
+  family:[{
+  firstName: String,      
+  lastName: String,
+    history:[{
+      action: String,  
+      points: Number,
+    }]
+  }]
 });
 
   //store the possible actions 
