@@ -5,9 +5,9 @@ var _ = require('underscore');  //utility library
 //make list shorter to the following tasks on had call, coffee, texted, meal
 //first name, last name, relationship, phone number to add family member.
 
-// mongoose.connect('mongodb://ralston:heart123@ds145415.mlab.com:45415/heroku_jcf6w2mv');
+mongoose.connect('mongodb://ralston:heart123@ds145415.mlab.com:45415/heroku_jcf6w2mv');
 
-mongoose.connect('mongodb://localhost:27017');    //connect to MongoDB
+// mongoose.connect('mongodb://localhost:27017');    //connect to MongoDB
 
 var db = mongoose.connection; //naming/variable chaining, convention
 
